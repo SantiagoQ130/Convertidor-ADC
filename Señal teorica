@@ -10,7 +10,7 @@ y = A * sin(2 * pi * f * t) + DC;
 % Grafica
 figure;
 plot(t, y);
-title('Señal Senoidal con Componente DC');
+title('Señal Senoidal teorica');
 xlabel('Tiempo (s)');
 ylabel('Amplitud (V)');
 xlim ([0 0.002])
