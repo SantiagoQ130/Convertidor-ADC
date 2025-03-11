@@ -1,0 +1,17 @@
+% Parámetros
+A = 1.4;           % Amplitud (Vpp / 2)
+DC = 1.5;          % Componente DC
+f = 500;            % Frecuencia en Hz
+t = 0:0.0001:1;     % Vector de tiempo (de 0 a 1 segundo con intervalo de 1 ms)
+
+% Señal seno 
+y = A * sin(2 * pi * f * t) + DC;
+
+% Grafica
+figure;
+plot(t, y);
+title('Señal Senoidal con Componente DC');
+xlabel('Tiempo (s)');
+ylabel('Amplitud (V)');
+xlim ([0 0.002])
+grid on;
