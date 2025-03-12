@@ -1,0 +1,10 @@
+data = readtable("#datos#");
+voltaje = data.Voltaje_V;
+
+% Calcular estadísticas
+media = mean(voltaje);
+desviacion = std(voltaje);
+
+% Mostrar resultados
+disp(['Media: ', num2str(media, '%.4f')]);
+disp(['Desviación estándar: ', num2str(desviacion, '%.4f')]);
