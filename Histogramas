@@ -1,0 +1,9 @@
+datos = readmatrix('#histograma#'); 
+% Graficar
+figure;
+histogram(datos, 100);
+xlabel('Valor');
+ylabel('Frecuencia');
+title('Histograma de datos');
+xlim([0 400])
+grid on;
