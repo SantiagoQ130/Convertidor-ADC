@@ -1,0 +1,24 @@
+% Extraer tiempo y voltaje desde la estructura DATOS1
+tiempo = #archivo_importado#.Tiempo_ms;  
+voltaje = #archivo_importado#.Voltaje_V;  
+
+% Crear una función para graficar
+function graficar_senal(t, V, titulo, limite_x)
+    figure;
+    plot(t, V, 'b'); % Grafica con línea azul
+    xlabel('Tiempo (s)');
+    ylabel('Voltaje (V)');
+    title(titulo);
+    grid on;
+    
+    % Si se proporciona un límite en X, aplicarlo
+    if nargin == 4
+        xlim(limite_x);
+    end
+end
+
+% Graficar la señal completa
+graficar_senal(tiempo, voltaje, 'Señal adquirida - Muestreo a 500 Hz');
+
+% Graficar la señal con límite en el eje X
+graficar_senal(tiempo, voltaje, 'Señal (vista limitada)', [0 25]);
